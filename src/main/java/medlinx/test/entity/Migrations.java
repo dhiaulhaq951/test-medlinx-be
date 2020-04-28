@@ -1,4 +1,4 @@
-package medlinx.entity;
+package medlinx.test.entity;
 
 import java.io.Serializable;
 
@@ -9,25 +9,25 @@ import javax.validation.constraints.NotNull;
 import lombok.Data;
 
 @Entity
-@Table(name="kota")
+@Table(name="migrations")
 @Data
-public class Kota implements Serializable{
+public class Migrations implements Serializable{
 	
 	@Id
 	@Column(name="id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Max(value=10)
 	@NotNull
-	@Max(value=11)
 	private int id;
 	
-	@Column(name="provinsi_id")
-	@Max(value=2)
-	@NotNull
-	private String provinsiId;
-	
-	@Column(name="name")
-	@NotNull
+	@Column(name="migration")
 	@Max(value=255)
-	private String name;
+	@NotNull
+	private String migration;
+	
+	@Column(name="batch")
+	@NotNull
+	@Max(value=11)
+	private int batch;
 
 }

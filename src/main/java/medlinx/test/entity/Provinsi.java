@@ -1,4 +1,4 @@
-package medlinx.entity;
+package medlinx.test.entity;
 
 import java.io.Serializable;
 
