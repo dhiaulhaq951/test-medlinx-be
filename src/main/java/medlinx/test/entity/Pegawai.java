@@ -22,18 +22,18 @@ public class Pegawai implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Max(value = 10)
+	//@Max(value = 10)
 	@Column(name="id")
 	@NotNull
 	private int id;
 	
 	@NotNull
 	@Column(name="nama")
-	@Max(value=25)
+	//@Max(value=25)
 	private String nama;
 	
 	@Column(name="alamat")
-	@Max(value=255)
+	//@Max(value=255)
 	private String alamat;
 	
 	@Column(name="provinsi")
@@ -43,15 +43,15 @@ public class Pegawai implements Serializable{
 	private int kota;
 	
 	@Column(name="telp")
-	@Max(value=15)
+	//@Max(value=15)
 	private String telp;
 	
 	@Column(name="hobi")
-	@Max(value=255)
+	//@Max(value=255)
 	private String hobi;
 	
 	@Column(name="status")
-	@Max(value=11)
+	//@Max(value=11)
 	@NotNull
 	private int status;
 	
